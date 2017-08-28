@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{width: 500px;border: 1px solid red;}
+        /*@media screen and (min-width:993px),screen and (max-width: 1200px){
+            .box{width:200px; border-color: gray;background: gray;}
+        }*/
+        @media screen and (max-width:992px){
+            .box{width:200px; border-color: gray;background: gray;}
+        }
+        @media screen and (max-width:768px){
+            .box{width:200px; border-color: gray;}
+            .title{color:red;}
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <p class="title">title title title title</p>
+</div>
+
+
+</body>
+</html>

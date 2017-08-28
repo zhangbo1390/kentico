@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburgers</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <style>
+        .title-bar{
+            font-family: "lato",sans-serif;
+            font-style: normal;
+            min-height: 92px;
+            font-weight: 500;
+            font-size: 16px;
+            border-bottom: 1px solid #e6e6e6;
+            background: #fff;
+        }
+        .title-bar-title{color: #000;}
+        #main-menu.is-stuck{
+            background: rgba(255,255,255,.95);
+            -webkit-box-shadow: 0 2px 16px -1px #757575;
+            -moz-box-shadow: 0 2px 16px -1px #757575;
+            box-shadow: 0 2px 16px -1px #757575;
+            min-height: 46px;
+        }
+        code {
+            display: inline-block;
+        }
+
+        code,
+        .hamburger {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div data-sticky-container="" class="sticky-container">
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+        <button class="hamburger hamburger--spring menu-control" title="Menu" type="button" data-toggle>
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+        </button>
+    </div>
+    <div class="title-bar sticky is-at-top" data-sticky data-options="marginTop:0;"  data-events="resize" id="main-menu">
+        <div class="title-bar-left">
+            <span class="title-bar-title">Sticky Navigation</span>
+        </div>
+        <div class="title-bar-right">
+            <ul class="dropdown menu align-right" data-dropdown-menu="ucwxka-dropdown-menu" role="menubar">
+                <li role="menuitem"><a>Item 1</a></li>
+                <li role="menuitem"><a href="#">Item 2</a></li>
+                <li role="menuitem"><a href="#">Item 3</a></li>
+                <li role="menuitem"><a href="#">Item 4</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script>
+    /**
+     * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+     *
+     * @private
+     * @author Todd Motto
+     * @link https://github.com/toddmotto/foreach
+     * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+     * @callback requestCallback      callback   - Callback function for each iteration.
+     * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+     * @returns {}
+     */
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+        forEach(hamburgers, function(hamburger) {
+            hamburger.addEventListener("click", function() {
+                this.classList.toggle("is-active");
+            }, false);
+        });
+    }
+</script>
+</body>
+</html>

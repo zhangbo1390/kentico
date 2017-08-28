@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>jQuery.mmenu</title>
+    <meta charset="utf-8" />
+    <link type="text/css" href="http://mmenu.frebsite.nl/demo/inc/demo.css?v=6.1.4" rel="stylesheet" />
+    <!-- Include jQuery.mmenu .css files -->
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hamburgers.css">
+
+</head>
+<body>
+<!--The page-->
+<div class="page">
+    <div class="header">
+        <a href="#menu"></a>
+        Demo
+    </div>
+    <div class="content">
+        <p><strong>This is a demo.</strong><br />
+            Click the menu icon to open the menu.</p>
+    </div>
+</div>
+
+<!-- The menu -->
+<nav id="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About us</a>
+            <ul>
+                <li>
+                    <a href="/about/history">History</a>
+                    <ul>
+                        <li><a href="/about/history">History</a></li>
+                        <li><a href="/about/team">The team</a></li>
+                        <li><a href="/about/address">Our address</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about/team">The team</a></li>
+                <li><a href="/about/address">Our address</a></li>
+            </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
+<!-- Include jQuery and the jQuery.mmenu .js files -->
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+<script type="text/javascript" src="http://mmenu.frebsite.nl/js/playground.js"></script>
+<!-- Fire the plugin onDocumentReady -->
+<script type="text/javascript">
+    jQuery(document).ready(function( $ ) {
+        $("#menu").mmenu();
+    });
+</script>
+</body>
+</html>
+
+
+
